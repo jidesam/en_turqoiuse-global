@@ -4,7 +4,7 @@
     [ngClass]="{ 'sticky top-0': isSticky }"
     class="flex justify-between items-center z-10 transition duration-300 ease-in-out"
   >
-    <img src="assets/images/N_BDCS Logo.svg" alt="" />
+    <img src="" alt="" />
     <div class="block md:hidden">
       <span (click)="showMenu = true">
         <svg
@@ -34,77 +34,47 @@
     </div>
     <nav class="hidden md:block">
       <ul class="flex gap-12 items-center">
+      
         <li
-          class="text-base inter font-medium leading-6 text-[#ACAE46] hover:text-[#ACAE46] cursor-pointer"
+          class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
         >
-          Home
+          About us
         </li>
         <li
           class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
         >
-          About Us
+          Objective
         </li>
         <li
           class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
         >
-          News
-        </li>
-        <li
-          class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
-        >
-          Contact Us
+          Opportunity
         </li>
         <li>
           <button
-            class="block px-8 bg-[#ACAE46] rounded mt-3 inter font-medium text-base text-center leading-[19.6px] py-3"
+            class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
           >
-            Sign Up
+            Contacts
           </button>
         </li>
       </ul>
     </nav>
   </div>
   <div class="my-auto py-16 lg:py-32">
-    <div *ngIf="count % 2 !== 0" data-aos="fade-up-left">
+    <div data-aos="fade-up-left">
       <h1
-        class="w-auto lg:w-[479px] text-[#F0F8FA] text-3xl lg:text-[48px] lg:leading-[57.6px] font-black"
+        class="w-auto lg:w-[479px] text-[#F0F8FA] text-2xl lg:text-[48px] lg:leading-[57.6px] font-black"
       >
-        <span class="text-[#ACAE46]">Real Time Updates</span> on Exchange Rates
+      EN_TURQUOISE
+        <span class="text-[#ACAE46]"> GLOBAL SERVICES</span> 
       </h1>
       <p
-        class="text-[#CFCFCF] font-medium text-2xl leading-7 my-6 lg:w-[587px]"
+        class="text-[#CFCFCF] font-medium text-xl leading-7 my-6 lg:w-[587px]"
       >
-        Authentic exchange rates across the country based on market realities.
+        is passionate about about customer service and delivery and and carry out consultancy services for companies on long and short term basis as required
       </p>
     </div>
-    <div *ngIf="count % 2 == 0" data-aos="fade-up-right">
-      <h1
-        class="w-auto lg:w-[479px] text-[#F0F8FA] text-3xl lg:text-[48px] lg:leading-[57.6px] font-black"
-      >
-        <span class="text-[#ACAE46]">Live On-Location</span>
-        data on Exchange Rates
-      </h1>
-      <p
-        class="text-[#CFCFCF] font-medium text-2xl leading-7 my-6 lg:w-[587px]"
-      >
-        Daily FX data to enable businesses make better decisions.
-      </p>
-    </div>
-
-    <div class="flex gap-6 items-center mt-16">
-      <img
-        src="assets/images/Previous.svg"
-        class="cursor-pointer"
-        (click)="changeText()"
-        alt=""
-      />
-      <img
-        src="assets/images/Next.svg"
-        (click)="changeText()"
-        class="cursor-pointer"
-        alt=""
-      />
-    </div>
+   
   </div>
 
   <div
