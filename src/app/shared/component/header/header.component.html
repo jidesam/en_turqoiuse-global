@@ -1,0 +1,177 @@
+<header class="hero-cover px-8 lg:px-20 xl:px-48 py-8 w-full h-[90vh] relative">
+  <div
+    #myHeader
+    [ngClass]="{ 'sticky top-0': isSticky }"
+    class="flex justify-between items-center z-10 transition duration-300 ease-in-out"
+  >
+    <img src="assets/images/N_BDCS Logo.svg" alt="" />
+    <div class="block md:hidden">
+      <span (click)="showMenu = true">
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M4 6H20M4 12H20M4 18H20"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </g>
+        </svg>
+      </span>
+    </div>
+    <nav class="hidden md:block">
+      <ul class="flex gap-12 items-center">
+        <li
+          class="text-base inter font-medium leading-6 text-[#ACAE46] hover:text-[#ACAE46] cursor-pointer"
+        >
+          Home
+        </li>
+        <li
+          class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
+        >
+          About Us
+        </li>
+        <li
+          class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
+        >
+          News
+        </li>
+        <li
+          class="text-base inter font-medium leading-6 text-[#F0F8FA] hover:text-[#ACAE46] cursor-pointer"
+        >
+          Contact Us
+        </li>
+        <li>
+          <button
+            class="block px-8 bg-[#ACAE46] rounded mt-3 inter font-medium text-base text-center leading-[19.6px] py-3"
+          >
+            Sign Up
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="my-auto py-16 lg:py-32">
+    <div *ngIf="count % 2 !== 0" data-aos="fade-up-left">
+      <h1
+        class="w-auto lg:w-[479px] text-[#F0F8FA] text-3xl lg:text-[48px] lg:leading-[57.6px] font-black"
+      >
+        <span class="text-[#ACAE46]">Real Time Updates</span> on Exchange Rates
+      </h1>
+      <p
+        class="text-[#CFCFCF] font-medium text-2xl leading-7 my-6 lg:w-[587px]"
+      >
+        Authentic exchange rates across the country based on market realities.
+      </p>
+    </div>
+    <div *ngIf="count % 2 == 0" data-aos="fade-up-right">
+      <h1
+        class="w-auto lg:w-[479px] text-[#F0F8FA] text-3xl lg:text-[48px] lg:leading-[57.6px] font-black"
+      >
+        <span class="text-[#ACAE46]">Live On-Location</span>
+        data on Exchange Rates
+      </h1>
+      <p
+        class="text-[#CFCFCF] font-medium text-2xl leading-7 my-6 lg:w-[587px]"
+      >
+        Daily FX data to enable businesses make better decisions.
+      </p>
+    </div>
+
+    <div class="flex gap-6 items-center mt-16">
+      <img
+        src="assets/images/Previous.svg"
+        class="cursor-pointer"
+        (click)="changeText()"
+        alt=""
+      />
+      <img
+        src="assets/images/Next.svg"
+        (click)="changeText()"
+        class="cursor-pointer"
+        alt=""
+      />
+    </div>
+  </div>
+
+  <div
+    class="absolute bg-white p-6 top-8 right-0"
+    (mouseleave)="showMenu = false"
+    *ngIf="showMenu"
+  >
+    <div class="flex justify-end">
+      <span (click)="showMenu = false">
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <g id="Menu / Close_SM">
+              <path
+                id="Vector"
+                d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </div>
+    <ul class="">
+      <li
+        class="text-base inter font-medium leading-6 text-[#2B4B5F] my-4 hover:text-[#ACAE46] cursor-pointer"
+      >
+        Home
+      </li>
+      <li
+        class="text-base inter font-medium leading-6 text-[#2B4B5F] my-4 hover:text-[#ACAE46] cursor-pointer"
+      >
+        About Us
+      </li>
+      <li
+        class="text-base inter font-medium leading-6 text-[#2B4B5F] my-4 hover:text-[#ACAE46] cursor-pointer"
+      >
+        News
+      </li>
+      <li
+        class="text-base inter font-medium leading-6 text-[#2B4B5F] my-4 hover:text-[#ACAE46] cursor-pointer"
+      >
+        Contact Us
+      </li>
+      <li>
+        <button
+          class="block px-8 bg-[#ACAE46] rounded mt-3 inter font-medium text-base text-center leading-[19.6px] py-3"
+        >
+          Sign Up
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
