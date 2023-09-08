@@ -25,3 +25,56 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #a7cdca; 
 }
+
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("assets/fonts/AvenirLTStd-Black.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Book";
+  src: url("assets/fonts/AvenirLTStd-Book.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Roman";
+  src: url("assets/fonts/AvenirLTStd-Roman.otf");
+}
+
+input[type=checkbox] {
+  accent-color: #0039A6 !important;
+  border-radius:4px !important;
+}
+
+font-avenir-black {
+  font-family: "Avenir-Black" !important;
+}
+
+.font-avenir-book {
+  font-family: "Avenir-Book" !important;
+}
+
+.font-avenir-roman {
+  font-family: "Avenir-Roman" !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir-Book", "Helvetica Neue", sans-serif;
+  background: white;
+}
+
+:root {
+  --b1: 220 18% 97% !important;
+}
+
+svg {
+  margin: 0 auto;
+  top: 2px !important;
+  position: relative;
+}
