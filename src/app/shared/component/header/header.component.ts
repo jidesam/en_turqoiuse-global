@@ -32,11 +32,11 @@ export class HeaderComponent implements AfterViewInit, OnInit {
     this.isSticky = window.pageYOffset > this.stickyOffset;
   }
   ngOnInit(): void {
-    setInterval(() => {
-      this.count++;
-    }, 7000);
+   
   }
-  changeText() {
-    this.count++;
-  }
+
+toggle(){
+  this.showMenu = !this.showMenu
+}
+ 
 }
