@@ -39,4 +39,8 @@ export class HeaderComponent implements AfterViewInit, OnInit {
   changeText() {
     this.count++;
   }
+
+  seeDe(){
+    this.showMenu = !this.showMenu
+  }
 }
