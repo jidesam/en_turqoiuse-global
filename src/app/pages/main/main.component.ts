@@ -9,15 +9,15 @@ import { Meta, Title } from '@angular/platform-browser';
 export class MainComponent {
   constructor(private meta: Meta, private title: Title) {
     this.meta.addTags([
-      { name: 'description', content: '9ja bdc landing page' },
+      { name: 'description', content: 'EnTurquoiseGlobal' },
       { name: 'author', content: 'ABCON | SBSC' },
       {
-        name: 'keywords',
+        name: 'EnTurquoiseGlobal',
         content:
-          'bdc, naijabdc, 9jaBdc, exchange, Bureau De Change, operator, parallel, sell, fx',
+          'EnTurquoiseGlobal, EnTurquoiseGlobal',
       },
     ]);
-    this.setTitle('9ja-bdc');
+    this.setTitle('EnTurquoiseGlobal');
   }
   setTitle(newTitle: string) {
     this.title.setTitle(newTitle);
