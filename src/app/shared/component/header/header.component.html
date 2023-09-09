@@ -7,7 +7,7 @@
     <img src="" alt="" />
     <div class="block md:hidden">
       <span (click)="showMenu = true">
-        menu
+        <img src="assets/images/hamburger.png" alt="" class="w-[32px]">
       </span>
     </div>
     <nav class="hidden md:block z-10">
@@ -44,7 +44,7 @@
         class="w-auto lg:w-[479px] z-1 text-[#F0F8FA] text-2xl lg:text-[48px] lg:leading-[57.6px] font-black"
       >
       EN_TURQUOISE
-        <span class="text-[#a7cdca]"> GLOBAL SERVICES</span> 
+        <span class="text-[#a7cdca] z-index"> GLOBAL SERVICES</span> 
       </h1>
       <p
         class="text-[#CFCFCF] z-10 font-medium text-xl leading-7 my-6 lg:w-[587px]"
@@ -56,7 +56,7 @@
   </div>
 <!-- mobile -->
   <div
-    class="absolute bg-white p-6 top-8 right-0"
+    class="absolute bg-white p-6 top-8 right-0 z-50"
     (mouseleave)="showMenu = false"
     *ngIf="showMenu"
   >
@@ -90,7 +90,7 @@
         </svg>
       </span>
     </div>
-    <ul class="">
+    <ul class="z-index">
       <li
         class="text-base inter font-medium leading-6 text-[#2B4B5F] my-4 hover:text-[#ACAE46] cursor-pointer"
       >
