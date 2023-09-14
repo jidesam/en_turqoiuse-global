@@ -6,12 +6,14 @@ import { MainComponent } from './main.component';
 import { HeaderComponent } from 'src/app/shared/component/header/header.component';
 import { FooterComponent } from 'src/app/shared/component/footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
+import { EmailComponent } from './email/email.component';
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    LandingComponent
+    LandingComponent,
+    EmailComponent
   ],
   imports: [
     CommonModule,
