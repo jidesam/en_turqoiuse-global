@@ -7,11 +7,12 @@ import {
   ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -38,5 +39,6 @@ export class HeaderComponent implements AfterViewInit, OnInit {
 toggle(){
   this.showMenu = !this.showMenu
 }
+
  
 }
