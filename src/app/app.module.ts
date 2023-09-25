@@ -8,7 +8,8 @@ import { TeamsComponent } from './pages/main/teams/teams.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TeamsComponent
+    TeamsComponent,
+    
   ],
   imports: [
     BrowserModule,
