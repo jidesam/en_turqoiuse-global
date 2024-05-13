@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
+
+interface Document {
+  title: string;
+  content: string;
+}
 
 declare let Email: any;
 @Component({
@@ -10,7 +15,17 @@ declare let Email: any;
 })
 export class LandingComponent implements OnInit {
 
-constructor(){
+  @Output() documentSelected = new EventEmitter<Document>();
+  @Input() receivedDocument: Document | null = null
+
+  documents: Document[] = [
+    { title: 'Document 1', content: 'Content of document 1' },
+    { title: 'Document 2', content: 'Content of document 2' },
+    { title: 'Document 3', content: 'Content of document 3' }
+  ];
+
+
+constructor( private router : Router){
 
 }
   ngOnInit(): void {
@@ -44,4 +59,24 @@ constructor(){
 
       // console.log(this.newsletterForm)
   }
+
+
+  selectedDocumentIndex: number = -1;
+  selectedDocument: Document | null = null;
+
+  selectDocument(index: number) {
+    this.selectedDocumentIndex = index;
+    this.selectedDocument = this.documents[index];
+    localStorage.setItem("document", JSON.stringify(this.selectedDocument) )
+  }
+
+  onUploadDocumentClick() {
+    
+    if (this.selectedDocument) {
+      this.router.navigateByUrl('teams')
+      this.documentSelected.emit(this.selectedDocument);
+    }
+  }
 }
+
+

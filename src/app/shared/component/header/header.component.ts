@@ -48,7 +48,6 @@ toggle(){
 }
 
 ngDoCheck() {
-  console.log(this.router.url)
   if(this.router.url.includes('teams')){
     this.showTeam = true
   }else {
